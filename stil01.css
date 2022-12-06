@@ -1,0 +1,75 @@
+#topptekst, .innhold, #eksempler, #kilder { /* Brukes til å endre egenskapene til toppteskten (overskriften), innhold (boksene: hva, hvordan, hvorfor), boksen til eksempler og boksen til kilder*/
+    display: flex; /* Brukes til å aktivere flexbox for topptekst, innhold, eksempler og kilder */
+    text-align: center;
+    font-family: Arial; 
+    align-items: center;
+}
+
+#topptekst { /* Brukes til å endre egenskapene til toppteksten (overskriften) */
+    border: 1px solid black;
+    height: 80px;
+    color: rgb(86, 192, 86);
+}
+
+@media screen and (max-width: 820px) { /* Brukes til å lage et responsivt design til nettsiden og gjelder når bredden på skjermen er fra 820px og under*/
+    .innhold {   
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: 821px) { /* Brukes til å lage et responsivt design til nettsiden og gjelder når bredden på skjermen er fra 821px og over*/
+    #hvordan, #hvorfor {   /* Brukes til å legge til luft sånn at alle boksene er sentrert*/
+      margin-left: 15px;
+    }
+    #hva, #hvordan, #hvorfor { /* Brukes til å endre størrelsen på boksene til 500px for å at de skal være store nok og fylle ut bredden av skjermen*/
+        width: 500px;
+    }
+  }
+
+
+#innhold { /* Brukes til å endre egenskapene til boksene inni innhold (de tre boksene, hva, hvordan og hvorfor) */
+    flex-direction: row; /* Brukes til at de 3 boksene hva, hvordan og hvorfor skal vises sidelengs altså vannrett i stedenfor å gå nedover (lodrett). */
+    align-items: center;
+
+}
+
+#hvordan { /* Brukes til å endre egenskapene til boksen hvordan inni innhold */
+    Margin-top: 15px; /* For å legge til luft over boksen hvordan */
+    border: 1px solid black;
+    height: 200px;
+    background-color: rgb(168, 216, 168);
+
+}
+
+#hva { /* Brukes til å endre egenskapene til boksen hva inni innhold */
+    Margin-top: 15px; /* For å legge til luft over boksen hva */
+    border: 1px solid black;
+    height: 200px;
+    background-color: rgb(168, 216, 168);
+}
+
+#hvorfor { /* Brukes til å endre egenskapene til boksen hvorfor inni innhold */
+    Margin-top: 15px; /* For å legge til luft over boksen hvorfor */
+    border: 1px solid black;
+    height: 200px;
+    background-color: rgb(168, 216, 168);
+}
+
+#eksempler { /* Brukes til å endre egenskapene til boksen om eksempler og link til neste side */
+    Margin-top: 15px; /* For å legge til luft over boksen som inneholder eksempler og link til neste side */
+    border: 1px solid black;
+    height: 200px; 
+    align-items: center;
+}
+
+#kilder { /* Brukes til å endre egenskapene til boksen hvor kildene ligger */
+    Margin-top: 15px; /* For å legge til luft over boksen med kilder */
+    border: 1px solid black;
+    height: 180px; 
+    background-color: rgb(165, 165, 165);
+    color: white;
+    align-items: center;
+}
+
+p, h1 { /* Brukes til å endre egenskapene til p (paragraph) og h1 (heading1) */
+    flex-grow: 1;
+}
