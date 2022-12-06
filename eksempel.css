@@ -1,0 +1,137 @@
+#hoved{
+    
+    display: grid; /*angir at grid skal brukes til utforming*/ 
+    background-color: rgb(86, 192, 86);/*bakgrunnsfarge på hele hovedelementet*/
+    grid-template-columns: repeat( 9,1fr);/*Funksjon som angir antall kolonner i grid-layout*/
+    grid-template-rows: repeat(7,1fr);/*Funksjon som angir antall rader i grid-layout*/
+    grid-template-areas: "t t t t t t t t t"
+    "o o o b b b m m m"
+    "o o o b b b m m m"
+    "o o o b b b m m m"
+    "v v v h h h f f f"
+    "v v v h h h f f f"
+    "v v v h h h f f f"
+    "k k k k l l l l l";/*Utforming av nettside og plassering av ulike grid-områder*/
+    position: absolute;/*Angir postion */
+    z-index: -2;/*Sier noe om rekkefølgen på div-elementer*/
+    width: 100%;
+  }
+ 
+#hoved > div { /*Sier at hoved-elementet er større enn resten av div-elementene*/
+    
+    border: 1px solid rgb(86, 192, 86); /*Definerer en linje som omgreiner alle div-elementer*/
+    
+}
+
+
+.topp{/*referer til klassen topp i html-fila*/
+  text-align: center;/*Gjør at teksten midtstilles*/
+  
+  color:rgb(86, 192, 86);/*Angir tekstfarge*/
+  background-color: #ffff;/*Angir bakgrunnsfarge*/
+
+  grid-area : t;/*Angir hvilket grid-area topp skal plasseres*/
+}
+.opplevelse{
+text-align: center;
+
+color: #ffff;
+background-color:rgb(86, 192, 86);
+
+grid-area: o;
+
+}
+a{/*referer til hyperlenke*/
+  color: #fff;/*Angir farge på lenker*/
+}
+#a2{/*Referer til en id som noen av hyperlenkene fikk*/
+  color: #000;/*Angir farge på hyperlenker med id="a2"*/
+}
+
+#brukt-tekst{
+text-align: center;
+
+color: #ffff;
+background-color: rgb(245, 151, 148);
+
+grid-area: b;
+
+
+
+}
+.mening{
+text-align:center;
+
+color: #ffff;
+background-color:rgb(86, 192, 86);
+
+grid-area: m;
+}
+.preg{
+  background-position: center;
+  
+  background-color: #ffff;
+  background-image: url("preg.png");/*Setter inn bakgrunnsbilde*/
+  background-size: 90%;/*Angir bakgrunnsstørrelse*/
+  background-repeat: no-repeat;/*Angir at bakgrunnen ikke skal forekomme flere ganger*/
+  filter: blur(3px);/*Et filter som gjør at bakgrunnsbildet blir utydelig*/
+  -webkit-filter: blur(3px);
+  
+  z-index: -1;/*Angir rekkefølgen på elementene i samme grid-area*/
+  grid-area: v;
+
+}
+#verna{
+text-align: center;
+
+color: black;
+
+z-index: auto;
+grid-area: v;
+
+
+}
+.hjemmelaga{
+text-align: center;
+
+color:#ffff;
+background-color: rgb(86, 192, 86);
+
+grid-area: h;
+}
+
+.foto{
+background-position: center;
+
+background-image: url("foto.png");
+background-size: 30%;
+background-blend-mode:difference;/*angir hvordan de ulike lagene blander seg med hverandre*/
+filter: blur(3px);
+  -webkit-filter: blur(3px);
+
+z-index: -1;
+grid-area: f;
+}
+#tekst-foto{
+
+text-align: center;
+
+color: #ffff;
+  
+z-index:auto;
+grid-area: f;
+}
+
+.kilder{
+  color:#ffff;
+
+  grid-area: k;
+}
+#ok{/*Egen id for kilder-overskrift*/
+  grid-area: k;
+  padding-inline-start: 5%; /*Lager luft i begynnelsen av linja*/
+}
+.bildekilder{
+  color: #fff;
+  grid-area: l;
+}
